@@ -1,16 +1,16 @@
 @font-face {
   font-family: bahnschrift;
-  src: url('https://martinraczszerelo.github.io/www.martin.racz/wp-content/uploads/fonts/Bahnschrift_Regular.ttf');
+  src: url('https://martinraczszerelo.github.io/wp-content/uploads/fonts/Bahnschrift_Regular.ttf');
 }
 
 @font-face {
   font-family: arial;
-  src: url('https://martinraczszerelo.github.io/www.martin.racz/wp-content/uploads/fonts/arial.ttf');
+  src: url('https://martinraczszerelo.github.io/wp-content/uploads/fonts/arial.ttf');
 }
 
 body {
   margin: 0;
-  background-image: url('https://martinraczszerelo.github.io/www.martin.racz/wp-content/uploads/back.png');
+  background-image: url('https://martinraczszerelo.github.io/wp-content/uploads/back.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
