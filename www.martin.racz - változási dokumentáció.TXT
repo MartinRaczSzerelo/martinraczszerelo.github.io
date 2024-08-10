@@ -52,4 +52,4 @@
 
 08.07 - Új rész nyílt meg a játékok számára az "Egyéb" részben.
 
-08.10 - A weboldal új címre költözött: https://martinraczszerelo.github.io/ és a szerkezete ismételten megváltozott.
+08.10 - A weboldal új címre költözött: https://martinraczszerelo.github.io/ és a szerkezete ismételten megváltozott. Az új cím miatt az indexelést újra kellet indítani, hogy a Google keresőmotorjába bekerüljön. A régebbi címek (/www.martin.racz, /www.en.martin.racz) átirányításra szolgáltak.
