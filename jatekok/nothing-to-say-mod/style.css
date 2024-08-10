@@ -1,0 +1,352 @@
+/*Modified by Martin R. Rácz at August 7th, 2024*/
+
+@font-face {
+	font-family: bahnschrift;
+	src: url(fonts/bahnschrift.ttf);
+}
+
+@font-face {
+	font-family: edwardian-script-itc;
+	src: url(fonts/ITCEDSCR.TTF);
+}
+
+* {
+	box-sizing: border-box;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+	background: #888;
+	margin: 0;
+	font-family: bahnschrift
+}
+
+.base {
+	background: #373737 url(images/bg.png) 0 55px no-repeat;
+	width: 400px;
+	height: 600px;
+	position: relative;
+	font-family: bahnschrift;
+	font-size: 19px;
+	margin: auto;
+}
+
+/*link style for the credits, especially for my YouTube channel "Martin Rácz" ;)*/
+.credit-link {
+	color: #888;
+}
+
+.credit-link:hover {
+	color: #fff;
+}
+
+.credit-link:active {
+	background-color: #f00;
+}
+
+/********************** Title page *************************/
+
+#titlepage {
+	text-align: center;
+	color: white;
+}
+
+#title {
+	position: absolute;
+	top: 15px;
+	width: 100%;
+	text-transform: uppercase;
+	color: #777;
+	font-size: 75px;
+}
+
+#subtitle {
+    position: absolute;
+    bottom: 90px;
+    width: 100%;
+    font-size: 20px;
+}
+
+#subtitle span.nothing {
+	color: #f3bfbf;
+}
+
+.info {
+	position: absolute;
+	width: 100%;
+	font-size: 14px;
+	color: #cdd6ee;
+}
+
+#credits {
+	bottom: 50px;
+	color: #888;
+}
+
+#start {
+	bottom: 25px;
+	color: #aaa;
+	opacity: 0; /* appear after a delay */
+	transition: opacity 1s;
+}
+
+#win {
+	position: absolute;
+	bottom: 90px;
+	width: 100%;
+	text-align: center;
+	font-family: edwardian-script-itc;
+	color: white;
+	font-size: 30px;
+	display: none;
+}
+
+/********************** Main *************************/
+
+#main {
+	padding-top: 90px; /* avoid dialogue margin collapse ¯\_(ツ)_/¯ */
+}
+
+.zoe {
+	width: 136px;
+	height: 224px;
+	background: url(images/zoe_blush.png);
+	position: absolute;
+	top: 229px;
+	left: 135px;
+}
+
+/********************** Letters *************************/
+
+#hud {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	padding: 5px 0 5px 0;
+	background: #373737;
+	text-align: center;
+}
+
+#letters {
+	font-size: 16px;
+	padding: 3px;
+	color: #aaa
+}
+
+#letters > span {
+	display: inline-block;
+	font-weight: bold;
+	background: #fff;
+	color: #aaa;
+	width: 22px;
+	height: 22px;
+	text-align: center;
+	margin: 2px 0;
+	border-radius: 25%;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#letters > span.selected {
+	color: #373737;
+	background: #bbb;
+}
+
+/* Buying = buy mode is on */
+.buying #letters {
+	font-size: 30px;
+	padding: 65px 60px 0 75px;
+	text-align: left;
+}
+
+.buying #letters > span {
+	width: 50px;
+	height: 50px;
+	margin: 6px 3px;
+}
+
+/* Buyable = you can actually click and buy this */
+#letters > span.buyable {
+	cursor: pointer;
+	color: #aaa;
+	border: 1px solid white;
+}
+
+#letters > span.buyable:hover {
+	color: #fff;
+	border: 2px solid #aaa;
+	background: #373737;
+}
+
+/* Missing = added when hovering over the choice with the missing letter */
+#letters > span.missing {
+	color: #f00;
+	border: 2px solid #f00;
+	animation: flashing 1s linear infinite
+}
+
+@keyframes flashing {
+	0% {opacity: 100%}
+	50% {opacity: 0%}
+	100% {opacity: 100%}
+}
+
+/********************** Points *************************/
+
+#points {
+	background: url("images/heart.png");
+	background-size: 100%;
+	display: inline-block;
+	margin: 10px 8px 10px 6px;
+	width: 40px;
+	height: 40px;
+	padding-top: 5px;
+	float: right;
+}
+
+#points > span {
+	color: white;
+	font-weight: bold;
+}
+
+.buying #points {
+	width: 60px;
+	height: 60px;
+	padding-top: 10px;
+	position: absolute;
+	margin-top: 5px;
+	left: 165px;
+	font-size: 24px;
+}
+
+/********************** Dialogue *************************/
+
+#zoe-dialogue {
+	padding: 15px 20px 15px 20px;
+	border-radius: 30px;
+	color: #fff;
+	background: #373737;
+	position: relative;
+	margin: 0 25px;
+}
+
+#zoe-dialogue:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -40px;
+	left: 160px;
+	color: #373737;
+
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #373737;
+}
+
+#zoe-dialogue.heart {
+	background: #ffc0c0;
+}
+
+#zoe-dialogue.heart:after {
+	border-top-color: #ffc0c0;
+}
+
+#zoe-dialogue .bg {
+	color: #fff;
+}
+
+#zoe-dialogue.heart .bg {
+	color: #e98b8b;
+}
+
+#player-dialogue {
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	right: 20px;
+
+	background: white;
+	color: #aaa;
+	padding: 15px;
+	text-align: center;
+	font-style: italic;
+	border-radius: 30px;
+}
+
+#player-dialogue span.nothing {
+	color: #000;
+	background: #ddd;
+	display: inline-block;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 16px;
+	width: 22px;
+	height: 22px;
+	border-radius: 25%;
+}
+
+#player-dialogue span.bg {
+	color: white;
+}
+
+#player-dialogue span.bg span.nothing {
+	color: white;
+	background: white;
+}
+
+/********************** Choices *************************/
+
+#choices {
+	position: absolute;
+	bottom: 15px;
+	left: 5px;
+	right: 5px;
+	display: flex;
+	align-items: stretch;
+	justify-content: stretch;
+}
+
+.buying #choices {
+	bottom: 5px;
+}
+
+#choices > div {
+	background: #aaa;
+	color: #000;
+	flex: 1 1 auto;
+	padding: 15px;
+	text-align: center;
+	margin: 5px;
+	border-radius: 10px;
+}
+
+#choices > div.available {
+	background: white;
+	cursor: pointer;
+	transition: transform 0.02s;
+}
+
+#choices > div.available:hover {
+	cursor: pointer;
+	transform: translate(0, -4px);
+}
+
+#choices > div > span.missing {
+	color: #888;
+}
+
+#choices > div:hover > span.missing {
+	color: #f00;
+}
+
+#choices > #win-restart {
+	background: #cdd6ee;
+}

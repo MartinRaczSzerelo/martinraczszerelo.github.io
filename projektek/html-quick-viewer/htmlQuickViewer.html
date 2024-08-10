@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML quick viewer</title>
+<style>
+     .switch {
+        font-family: arial;
+        color: #FFF;
+        background-color: #08F;
+        border: 3px solid #888;
+        border-radius: 10px;
+    }
+
+    .switch:hover {
+        border-color: #F80;
+    }
+
+    .switch:active {
+        background-color: #F00;
+        color: #FFF;
+    }
+
+    #input-container {
+        display: flex;
+        align-items: stretch;
+        height: 700px;
+    }
+
+    #input-code, #output {
+        flex: 2;
+        height: 100%;
+        border: 3px solid #ccc;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #output {
+        background-color: #FFF;
+    }
+
+    body.light {
+        background-color: #FFF;
+        color: #000;
+    }
+
+    body.dark {
+        background-color: #000;
+        color: #FFF;
+
+.dark #input-code {
+        background-color: #000;
+        color: #FFF;
+    }
+
+</style>
+</head>
+<body class="light">
+<h1 class="light" style="font-family: bahnschrift; text-align: center;">HTML quick viewer</h1>
+<a href="#" class="switch" onclick="toggleTheme()">Toggle theme</a>
+<div id="input-container">
+    <textarea id="input-code" placeholder="Enter the HTML code here"></textarea>
+    <div style="color: #000" id="output"></div>
+</div>
+
+<script>
+    function updateOutput() {
+        var inputCode = document.getElementById("input-code").value;
+        var outputArea = document.getElementById("output");
+        outputArea.innerHTML = inputCode;
+    }
+
+    function toggleTheme() {
+        var body = document.body;
+        var inputCodeArea = document.getElementById("input-code");
+        var outputArea = document.getElementById("output");
+
+        if (body.classList.contains("light")) {
+            body.classList.remove("light");
+            body.classList.add("dark");
+            inputCodeArea.style.backgroundColor = "#000";
+            inputCodeArea.style.color = "#FFF";
+        } else {
+            body.classList.remove("dark");
+            body.classList.add("light");
+            inputCodeArea.style.backgroundColor = "#FFF";
+            inputCodeArea.style.color = "#000";
+        }
+    }
+
+    document.getElementById("input-code").addEventListener("input", updateOutput);
+    updateOutput();
+</script>
+
+</body>
+</html>

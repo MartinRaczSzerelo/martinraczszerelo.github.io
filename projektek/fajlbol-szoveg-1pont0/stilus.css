@@ -1,0 +1,54 @@
+body {
+background-color: #000
+}
+
+input {
+background-color: #08F;
+color: #FFF;
+border-radius: 10px;
+border-style: solid;
+border-width: 2px;
+border-color: #000
+}
+
+h1 {
+color: #FFF;
+font-family: bahnschrift;
+}
+
+.out {
+font-family: courier;
+color: #FFF
+}
+
+.default {
+font-family: bahnschrift;
+color: #FFF
+}
+
+button {
+border-style: solid;
+border-color: #000;
+border-width: 2px;
+border-radius: 10px;
+background-color: #888
+}
+
+button, input {
+font-family: bahnschrift;
+}
+
+button:hover, input:hover {
+cursor: pointer;
+border-color: #FFF
+}
+
+button:active {
+background-color: #555;
+color: #000
+}
+
+input:active {
+background-color: #048;
+color: #999
+}

@@ -1,0 +1,102 @@
+@font-face {
+  font-family: bahnschrift;
+  src: url('https://martinraczszerelo.github.io/www.martin.racz/wp-content/uploads/fonts/Bahnschrift_Regular.ttf');
+}
+
+@font-face {
+  font-family: arial;
+  src: url('https://martinraczszerelo.github.io/www.martin.racz/wp-content/uploads/fonts/arial.ttf');
+}
+
+body {
+  margin: 0;
+  background-image: url('https://martinraczszerelo.github.io/www.martin.racz/wp-content/uploads/back.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.link {
+  color: #008;
+  transition: font-size 0.3s ease;
+}
+
+.link:hover {
+  color: #04F;
+  font-size: 120%
+}
+
+.link:active {
+  color: #FFF;
+  background-color: #F00;
+}
+
+.bar {
+  background-color: #fff;
+  font-family: bahnschrift
+}
+
+.bar-link {
+  color: #000;
+}
+
+.bar-link:hover {
+  color: #fff;
+  background-color: #000
+}
+
+.bar-link:active {
+  background-color: #f00
+}
+
+.heading-main {
+  color: #fff;
+  text-align: center;
+  padding-top: 125px;
+  font-size: 250%;
+  font-family: arial
+}
+
+.foreground {
+  background-color: #fff;
+  color: #000;
+  font-family: bahnschrift
+}
+
+.thumbnail {
+  transition: ease-in-out 0.2s transform;
+}
+
+.thumbnail:hover {
+  transform: scale(0.8)
+}
+
+.dropdown {
+  float: left
+}
+
+.artwork {
+  max-width: 100%
+}
+
+.thumbnail-trans-back {
+  position: absolute;
+}
+
+.thumbnail-trans-front {
+  position: relative;
+  animation: fade 4s infinite;
+}
+
+@keyframes fade {
+  0% {opacity: 0%}
+  40% {opacity: 0%}
+  50% {opacity: 100%}
+  90% {opacity: 100%}
+  100% {opacity: 0%}
+}
+
+.thumbnail-trans-image {
+  width: 500px;
+  max-width: 100%;
+}

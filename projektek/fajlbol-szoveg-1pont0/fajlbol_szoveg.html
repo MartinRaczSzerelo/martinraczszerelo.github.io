@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fájlból szöveg 1.0</title>
+    <link rel="stylesheet" href="stilus.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <h1>Fájlból szöveg</h1>
+  <p class="default">1. Importálj be bármilyen típusú fájlt.<br>2. A "szöveg" gomb megnyomásával a fájl UTF-8 szabványú szövegként jelenik meg.<br>A "Hex" gomb megnyomásával a fájl bájtjai hexadecimális értékekként jelenik meg.<br><br>Megjegyzés: Nagyobb fájlok esetén a megjelenítés hosszabb ideig tarthat. Ha a böngésző azt mondja, hogy ez az oldal nem válaszol, akkor válasszuk a várakozást.</p>
+    <input type="file" id="fileInput">
+    <button onclick="readFileAsText()">Szöveg</button>
+    <button onclick="readFileAsHex()">Hex</button>
+    <p id="output" class="out"></p>
+
+    <script>
+        function readFileAsText() {
+            var fileInput = document.getElementById('fileInput');
+            var file = fileInput.files[0];
+
+            var reader = new FileReader();
+
+            reader.onload = function(event) {
+                var text = event.target.result;
+                document.getElementById('output').textContent = text;
+            };
+
+            reader.readAsText(file, 'UTF-8'); // Specify the encoding here, if needed
+        }
+
+        function readFileAsHex() {
+            var fileInput = document.getElementById('fileInput');
+            var file = fileInput.files[0];
+
+            var reader = new FileReader();
+
+            reader.onload = function(event) {
+                var arrayBuffer = event.target.result;
+                var byteArray = new Uint8Array(arrayBuffer);
+                var hexString = '';
+
+                for (var i = 0; i < byteArray.length; i++) {
+                    var hex = byteArray[i].toString(16);
+                    hex = (hex.length === 1) ? '0' + hex : hex; // Add leading zero if necessary
+                    hexString += hex.toUpperCase() + ' '; // Convert to uppercase
+                }
+
+                document.getElementById('output').textContent = hexString.trim();
+            };
+
+            reader.readAsArrayBuffer(file);
+        }
+    </script>
+</body>
+</html>
