@@ -5,8 +5,6 @@ Amit látsz weboldalt valamennyire személyes, de egészben általános.
 
 Martin Rácz 2024. Minden jog fenntartva.
 
-
-
 # Martin Rácz's website
 
 What you're looking at is my website that I started hosting since February of 2024. The website started hosting first at drv.tw, but it turned out to be instable and had problems with multimedia files. That's why I moved over to GitHub because hosting is much easier here.
