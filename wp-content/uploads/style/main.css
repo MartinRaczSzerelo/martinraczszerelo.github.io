@@ -63,6 +63,10 @@ body {
   font-family: bahnschrift
 }
 
+.foreground-tp {
+  font-family: bahnschrift;
+}
+
 .thumbnail {
   transition: ease-in-out 0.2s transform;
 }
