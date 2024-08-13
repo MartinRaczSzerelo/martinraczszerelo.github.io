@@ -3,6 +3,9 @@
 Amit látsz az az én weboldalam, amit 2024 február óta müködtetek. Előszőr drv.tw-n kezdtem működtetni, de nem volt stabil és problémák voltak a multimédiás fájlokkal. Ezért GitHub-ra költöztem, mert könnyebben meg lehet valósítani a működtetést.
 Amit látsz weboldalt valamennyire személyes, de egészben általános.
 
+Martin Rácz 2024. Minden jog fenntartva.
+
+
 
 # Martin Rácz's website
 
