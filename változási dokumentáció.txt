@@ -55,3 +55,5 @@
 08.10 - A weboldal új címre költözött: https://martinraczszerelo.github.io/ és a szerkezete ismételten megváltozott. Az új cím miatt az indexelést újra kellet indítani, hogy a Google keresőmotorjába bekerüljön. A régebbi címek (/www.martin.racz, /www.en.martin.racz) átirányításra szolgáltak.
 
 08.13 - Az új URL már kikereshető kulcsszavakkal, az "Egyéb" és "projektek" lap frissült.
+
+08.22 - A "Kezdőlap" és "Rólam" lap frissült.
