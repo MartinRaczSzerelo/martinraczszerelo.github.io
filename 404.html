@@ -3,12 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404-es hiba - Martin Rácz</title>
-    <link rel="icon" type="image/x-icon" href="content/logo.ico">
+    <title>404 Not found - Martin Rácz</title>
+    <link rel="icon" type="image/x-icon" href="wp-content/uploads/logo.ico">
+    <link rel="stylesheet" href="wp-content/uploads/style/main.css">
   </head>
   <body>
+    <style>
+      h1, p {font-family: bahnschrift;}
 
-    <p style="font-family:bahnschrift;">404 Not found - Ha ezt a lapot látod, akkor:<br><br> - A tartalom, amit keresel nem létezik;<br>- A keresett oldal még nem készült el;<br> - máshová költözött<br> - vagy el lett távolítva.</p>
-  
+      .image {
+        width: 75%;
+        max-width: 400px;
+        animation: swing 1.5s ease-in-out infinite;
+        transform-origin: 50% 10%;
+      }
+
+      @keyframes swing {
+        0% {transform: rotate(-10deg);}
+        50% {transform: rotate(10deg);}
+        100% {transform: rotate(-10deg);}
+      }
+
+      .cont {
+        justify-content: center;
+        display: flex;
+      }
+    </style>
+    <h1 style="text-align: center;">Nem található a tartalom!</h1>
+    <div class="cont">
+      <img class="image" src="wp-content/uploads/no-page.png">
+    </div>
+    <p style="text-align: center;"><a class="link" href="https://martinraczszerelo.github.io/">Vissza a kezdőlapra</a></p>
   </body>
 </html>
