@@ -59,3 +59,5 @@
 08.22 - A "Kezdőlap" és "Rólam" lap frissült.
 
 09.11 - A "letölthető fájlok" lap hozzá lett adva a nyilvánosan elérhető fájloknak a későbbiekben.
+
+10.15 - Az összes lap frissült, a csetbotok képei el lettek rendezve, valamint a favicon kikerült a navigáló sávból.
