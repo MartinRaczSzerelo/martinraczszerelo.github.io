@@ -31,21 +31,21 @@ body {
   background-color: #F00;
 }
 
-.bar {
+.top-bar {
   background-color: #fff;
   font-family: bahnschrift
 }
 
-.bar-link {
+.top-bar-link {
   color: #000;
 }
 
-.bar-link:hover {
+.top-bar-link:hover {
   color: #fff;
   background-color: #000
 }
 
-.bar-link:active {
+.top-bar-link:active {
   background-color: #f00
 }
 
@@ -75,7 +75,7 @@ body {
   transform: scale(0.8)
 }
 
-.dropdown {
+.top-bar-resp {
   float: left
 }
 
@@ -103,4 +103,25 @@ body {
 .thumbnail-trans-image {
   width: 500px;
   max-width: 100%;
+}
+
+.chatbots {
+  width: 150px;
+  min-height: 150px;
+}
+
+.cb-cont {
+  width: auto;
+  min-height: 150px;
+  display: flex
+}
+
+.cb-img {
+  border-radius: 50%;
+  display: block
+}
+
+.cb-img:hover {
+  border: solid 4px #000;
+  box-sizing: border-box
 }
