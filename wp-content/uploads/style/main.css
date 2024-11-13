@@ -125,3 +125,29 @@ body {
   border: solid 4px #000;
   box-sizing: border-box
 }
+
+@media only screen and (min-width: 830px) {
+  .big-iframe { /* Added to control the appearance of embedded Youtube videos. Below 830 pixels of width, a thumbnail image will be used instead. */
+    display: block
+  }
+
+  .big-iframe-placeholder {
+    display: none
+  }
+}
+
+@media only screen and (max-width: 829px) {
+  .big-iframe {
+    display: none
+  }
+
+  .big-iframe-placeholder {
+    display: block;
+    transition: ease-in-out 0.2s transform;
+    width: 90%
+  }
+
+  .big-iframe-placeholder:hover {
+    transform: scale(0.8)
+  }
+}
