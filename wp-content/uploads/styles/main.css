@@ -33,7 +33,10 @@ body {
 
 .top-bar {
   background-color: #fff;
-  font-family: bahnschrift
+  font-family: bahnschrift;
+  position: absolute;
+  width: 100%;
+  top: 0
 }
 
 .top-bar-link {
@@ -47,6 +50,12 @@ body {
 
 .top-bar-link:active {
   background-color: #f00
+}
+
+.top-bar-opt {
+  border-right: solid 2px #aaa;
+  float: left;
+  padding: 8px
 }
 
 .heading-main {
@@ -76,7 +85,8 @@ body {
 }
 
 .top-bar-resp {
-  float: left
+  float: left;
+  height: 35px
 }
 
 .artwork {
