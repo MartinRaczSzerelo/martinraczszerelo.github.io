@@ -64,4 +64,6 @@
 
 10.19 - A letöltések lapja frissült.
 
-11.20 - A kezdőlap frissült egy kiemelkedő tartalommal, ami bemutatja a Minecraft-ban megépített VASZC Puskás Tivadar Szakképző Iskolát.
+11.20 - A kezdőlap frissült egy kiemelkedő tartalommal, ami bemutatta a Minecraft-ban megépített VASZC Puskás Tivadar Szakképző Iskolát.
+
+11.21 - A weboldal kapott egy új lapot a galériákhoz, amit egyenlőre az "Egyéb" lapon keresztül lehet elérni. A későbbiek során a navigáló sávban lesz.
