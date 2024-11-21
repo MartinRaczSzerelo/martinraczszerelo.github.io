@@ -66,4 +66,4 @@
 
 11.20 - A kezdőlap frissült egy kiemelkedő tartalommal, ami bemutatta a Minecraft-ban megépített VASZC Puskás Tivadar Szakképző Iskolát.
 
-11.21 - A weboldal kapott egy új lapot a galériákhoz, amit egyenlőre az "Egyéb" lapon keresztül lehet elérni. A későbbiek során a navigáló sávban lesz.
+11.21 - A weboldal kapott egy új lapot a galériákhoz, amit el lehetett érni a navigáló sávban. A navigáló sáv is meg lett ujítva azzal a céllal, hogy optimalizált legyen a jövőben előforduló hozzáadott lapokhoz.
