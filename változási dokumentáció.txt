@@ -69,3 +69,5 @@
 11.21 - A weboldal kapott egy új lapot a galériákhoz, amit el lehetett érni a navigáló sávban. A navigáló sáv is meg lett ujítva azzal a céllal, hogy optimalizált legyen a jövőben előforduló hozzáadott lapokhoz.
 
 11.22 - A "Rólam" lap frissült.
+
+11.30 - A weboldal szerkezete frissült és a görgő új kinézetet kapott. Most a weboldalhoz szükséges erőforrások és a nyilvános tartalom szét lett választva külön mappákra ("uploads" és "resources").
