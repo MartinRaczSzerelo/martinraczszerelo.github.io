@@ -74,9 +74,11 @@ body {
 .top-bar {
   background-color: #fff;
   font-family: bahnschrift;
-  position: absolute;
+  position: fixed;
+  z-index: 10;
   width: 100%;
-  top: 0
+  top: 0;
+  box-shadow: rgba(0,0,0,0.3) 0 10px 10px;
 }
 
 .top-bar-link {
