@@ -71,3 +71,8 @@
 11.22 - A "Rólam" lap frissült.
 
 11.30 - A weboldal szerkezete frissült és a görgő új kinézetet kapott. Most a weboldalhoz szükséges erőforrások és a nyilvános tartalom szét lett választva külön mappákra ("uploads" és "resources").
+
+
+2025:
+
+01.25 - A weboldal hamarosan 1 éves lesz, ezért léggömbök lettek hozzáadva a szülinapi hangulathoz. Plusz a "rólam" lap frissült.
