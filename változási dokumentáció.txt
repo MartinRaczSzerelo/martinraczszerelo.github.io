@@ -78,3 +78,5 @@
 01.25 - A weboldal hamarosan 1 éves lesz, ezért léggömbök lettek hozzáadva a szülinapi hangulathoz. Plusz a "rólam" lap frissült.
 
 02.06 - A "Rólam" lap frissült.
+
+04.23 - Új projekt lett hozzáadva: Rain simulator by Martin Rácz
