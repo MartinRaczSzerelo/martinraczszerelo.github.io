@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rain simulator by Martin Rácz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="rain-sim.ico">
+  </head>
+  <body>
+    <script>
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+      function setupAudio(url) {
+       const audio = new Audio(url);
+       const source = ctx.createMediaElementSource(audio);
+       const gainNode = ctx.createGain();
+       gainNode.gain.value = 0; // Start silent
+       source.connect(gainNode).connect(ctx.destination);
+       return { audio, gainNode };
+      }
+
+      const track1 = setupAudio("heavy.opus");
+      const track2 = setupAudio("light.opus");
+      const track3 = setupAudio("sunny.opus");
+
+      async function fadeIn(track, duration = 6) {
+       await ctx.resume();
+       const now = ctx.currentTime;
+       track.gainNode.gain.setValueAtTime(0, now);
+       track.gainNode.gain.linearRampToValueAtTime(1, now + duration);
+       track.audio.play();
+      }
+
+      async function fadeOut(track, duration = 6) {
+        await ctx.resume();
+       const now = ctx.currentTime;
+       track.gainNode.gain.setValueAtTime(track.gainNode.gain.value, now);
+       track.gainNode.gain.linearRampToValueAtTime(0, now + duration);
+       setTimeout(() => track.audio.pause(), duration * 1000);
+      }
+
+      function thunder() {
+       let thunderVar = Math.floor((Math.random()*2));
+
+        if (thunderVar == 1) {
+         document.getElementById("thunder").src = "thunder2.mp3";
+       } else {
+         document.getElementById("thunder").src = "thunder.opus";
+       }
+
+       document.getElementById("thunder").play();
+      }
+
+      function heavy() {
+       document.getElementById("thunder").play();
+       fadeIn(track1);
+       fadeOut(track2);
+       fadeOut(track3);
+      }
+
+      function light() {
+        document.getElementById("thunder").play();
+        fadeOut(track1);
+        fadeIn(track2);
+        fadeOut(track3);
+      }
+
+      function sunny() {
+       fadeOut(track1);
+       fadeOut(track2);
+       fadeIn(track3);
+      }
+
+      function stopAudio() {
+        fadeOut(track1);
+        fadeOut(track2);
+        fadeOut(track3);
+      }
+    </script>
+
+    <style>
+      body {
+        background: linear-gradient(to bottom, white, gray);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      @font-face {
+        font-family: bahn;
+        src: url(https://martinraczszerelo.github.io/wp-content/resources/fonts/Bahnschrift_Regular.ttf);
+      }
+
+      @font-face {
+        font-family: arial;
+        src: url(https://martinraczszerelo.github.io/wp-content/resources/fonts/arial.ttf);
+      }
+
+      html {
+        font-family: bahn;
+        text-align: center;
+      }
+
+      button {
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        height: 50px;
+        width: 80px;
+        font-size: 150%;
+        background: linear-gradient(to bottom, rgb(230,230,230), rgb(150,150,150));
+        box-shadow: rgb(100,100,100) 0px 10px 5px;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        color: rgb(70,70,70);
+        background: linear-gradient(to bottom, rgb(230,230,230), rgb(180,180,180));
+      }
+
+      button:active {
+        color: #fff;
+        background: linear-gradient(to bottom, rgb(60,60,60), rgb(20,20,20));
+      }
+
+      #stop-button {
+        font-family: arial;
+        font-weight: bold;
+        border-radius: 10px;
+        height: 50px;
+        width: 80px;
+        font-size: 150%;
+        background: linear-gradient(to bottom, rgb(230,130,130), rgb(150,100,100));
+        box-shadow: rgb(100,100,100) 0px 10px 5px;
+        margin: 10px;
+      }
+
+      #stop-button:hover {
+        color: rgb(70,70,70);
+        background: linear-gradient(to bottom, rgb(230,180,180), rgb(200,130,130));
+      }
+
+      #stop-button:active {
+        color: #fff;
+        background: linear-gradient(to bottom, rgb(200,100,100), red);
+        border-color: #fff;
+      }
+    </style>
+    
+    <img style="width: 100%; max-width: 400px;" src="https://martinraczszerelo.github.io/wp-content/resources/martinracz.png">
+    <h1 style="margin: 0;">rain simulator</h1>
+    <div style="margin: 30px 0px;">
+      <audio loop id="heavy" src="heavy.opus"></audio>
+      <audio loop id="light" src="light.opus"></audio>
+      <audio loop id="sunny" src="sunny.opus"></audio>
+      <audio id="thunder" src="thunder.opus"></audio>
+      <button onclick="sunny()">Sunny</button>
+      <button onclick="light()">Light</button>
+      <button onclick="heavy()">Heavy</button>
+      <br>
+      <button id="stop-button" onclick="stopAudio()">Stop</button>
+    </div>
+
+    <p>The simulator basically plays pre-recorded audio in specific orders when you press a button.<br>The audio tracks were taken from <a href="https://pixabay.com/">Pixabay</a> and they were modified using <a href="https://www.audacityteam.org/">Audacity</a> for this purpose.</p>
+    <p>It is highly recommended to <b>wait between switches for at least 8 seconds!</b> Otherwise the next audio won't play.</p>
+
+    <p style="position: fixed; left: 0px; bottom: 0px">Martin Rácz 2025.</p>
+  </body>
+</html>
