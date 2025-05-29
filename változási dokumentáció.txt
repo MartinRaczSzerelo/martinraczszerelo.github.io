@@ -80,3 +80,5 @@
 02.06 - A "Rólam" lap frissült.
 
 04.23 - Új projekt lett hozzáadva: Rain simulator by Martin Rácz
+
+05.29 - Új lap lett hozzáadva: Kodek összehasonlítás. Bemutatta a kodekek közti különbséget.
