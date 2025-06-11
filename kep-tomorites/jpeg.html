@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/wp-content/resources/styles/main.css">
+  </head>
+  <body style="background: #fff; font-family: bahnschrift; text-align: center;">
+    <style>
+    #image-view {
+      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      cursor: zoom-in;
+      width: 100%; max-width: 800px;
+    }
+
+    #image-view.zoomed {
+      transform: scale(10);
+      cursor: zoom-out;
+      transition: transform 0.4s ease-out;
+    }
+
+    #image-cont {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    </style>
+
+    <label for="slider"><h2>Quality level: <span id="slider-value">2</span><br><span id="size">134</span> KB</h2></label>
+    <input style="width: 90vw; max-width: 300px;" type="range" id="slider" min="2" max="31" value="2">
+    <br>
+    <div id="image-cont">
+      <img id="image-view" src="/wp-content/uploads/files/image-compression/jpeg/2.jpg">
+    </div>
+
+    <script>
+      const imageCache = [];
+      for (let i = 2; i <= 31; i++) {
+        const img = new Image();
+        img.src = `/wp-content/uploads/files/image-compression/jpeg/${i}.jpg`;
+        imageCache.push(img);
+      }
+
+      const fileSizes = {
+        2: "134",
+        3: "99.9",
+        4: "82.7",
+        5: "73.1",
+        6: "65.1",
+        7: "59.6",
+        8: "54.7",
+        9: "51.6",
+        10: "48.9",
+        11: "46.4",
+        12: "44.4",
+        13: "42.9",
+        14: "41.3",
+        15: "40",
+        16: "38.8",
+        17: "37.9",
+        18: "37",
+        19: "36.1",
+        20: "35.3",
+        21: "34.7",
+        22: "34",
+        23: "33.4",
+        24: "32.8",
+        25: "32.3",
+        26: "31.8",
+        27: "31.4",
+        28: "30.9",
+        29: "30.6",
+        30: "30.2",
+        31: "29.9"
+      };
+
+      const displaySize = document.getElementById("size");
+      const slider = document.getElementById("slider");
+      const imageView = document.getElementById("image-view");
+      const valueDisplay = document.getElementById("slider-value");
+
+      let lastValue = Number(slider.value);
+
+      function updateImage(value) {
+        imageView.src = `/wp-content/uploads/files/image-compression/jpeg/${value}.jpg`;
+        valueDisplay.textContent = value;
+
+        if (fileSizes[value]) {
+          displaySize.textContent = fileSizes[value];
+        } else {
+          displaySize.textContent = "Unknown";
+        }
+      }
+
+      slider.addEventListener("wheel", (event) => {
+        event.preventDefault();
+
+        let current = Number(slider.value);
+        const step = 1;
+
+        if (event.deltaY < 0 && current < slider.max) {
+          current += step;
+        } else if (event.deltaY > 0 && current > slider.min) {
+          current -= step;
+        }
+
+        slider.value = current;
+        updateImage(current);
+        lastValue = current;
+      });
+
+      slider.addEventListener("input", () => {
+        const current = Number(slider.value);
+        updateImage(current);
+        lastValue = current;
+      });
+
+      imageView.addEventListener("click", () => {
+        imageView.classList.toggle("zoomed");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/wp-content/resources/styles/main.css">
+  </head>
+  <body style="background: #fff; font-family: bahnschrift; text-align: center;">
+    <style>
+    #image-view {
+      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      cursor: zoom-in;
+      width: 100%; max-width: 800px;
+    }
+
+    #image-view.zoomed {
+      transform: scale(5);
+      cursor: zoom-out;
+      transition: transform 0.4s ease-out;
+    }
+
+    #image-cont {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    </style>
+
+    <label for="slider"><h2>CRF <span id="slider-value">0</span><br><span id="size">505</span> KB</h2></label>
+    <input style="width: 90vw; max-width: 300px;" type="range" id="slider" min="0" max="50" value="0" step="2">
+    <br>
+    <div id="image-cont">
+      <img id="image-view" src="/wp-content/uploads/files/image-compression/heic/0.png">
+    </div>
+
+    <script>
+      const imageCache = [];
+      for (let i = 0; i <= 50; i+= 2) {
+        const img = new Image();
+        img.src = `/wp-content/uploads/files/image-compression/heic/${i}.png`;
+        imageCache.push(img);
+      }
+
+      const displaySize = document.getElementById("size");
+      const slider = document.getElementById("slider");
+      const imageView = document.getElementById("image-view");
+      const valueDisplay = document.getElementById("slider-value");
+
+      const fileSizes = {
+        0: "505",
+        2: "419",
+        4: "340",
+        6: "269",
+        8: "212",
+        10: "165",
+        12: "130",
+        14: "104",
+        16: "84.6",
+        18: "68.8",
+        20: "56",
+        22: "45.8",
+        24: "37.3",
+        26: "30.6",
+        28: "25.1",
+        30: "20.4",
+        32: "16.7",
+        34: "13.8",
+        36: "11.3",
+        38: "9.6",
+        40: "8.55",
+        42: "7.77",
+        44: "7.35",
+        46: "7.02",
+        48: "7.01",
+        50: "7"
+      };
+
+      let lastValue = Number(slider.value);
+
+      function updateImage(value) {
+        imageView.src = `/wp-content/uploads/files/image-compression/heic/${value}.png`;
+        valueDisplay.textContent = value;
+
+        if (fileSizes[value]) {
+          displaySize.textContent = fileSizes[value];
+        } else {
+          displaySize.textContent = "Unknown";
+        }
+      }
+
+      slider.addEventListener("wheel", (event) => {
+        event.preventDefault();
+
+        let current = Number(slider.value);
+        const step = 2;
+
+        if (event.deltaY < 0 && current < slider.max) {
+          current += step;
+        } else if (event.deltaY > 0 && current > slider.min) {
+          current -= step;
+        }
+
+        slider.value = current;
+        updateImage(current);
+        lastValue = current;
+      });
+
+      slider.addEventListener("input", () => {
+        const current = Number(slider.value);
+        updateImage(current);
+        lastValue = current;
+      });
+
+      imageView.addEventListener("click", () => {
+        imageView.classList.toggle("zoomed");
+      });
+    </script>
+  </body>
+</html>

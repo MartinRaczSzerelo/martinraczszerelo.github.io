@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <title>Kép tömörítés - Martin Rácz</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="martin, rácz, racz, szerelő, szerelo, web, weboldal, honlap">
+  <meta name="author" content="Martin Rácz">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="/wp-content/resources/back.png" as="image">
+  <link rel="preload" href="/wp-content/resources/scrollbar/arrow-down-active.png" as="image">
+  <link rel="preload" href="/wp-content/resources/scrollbar/arrow-up-active.png" as="image">
+  <link rel="canonical" href="https://martinraczszerelo.github.io/">
+  <link rel="stylesheet" href="/wp-content/resources/styles/main.css">
+  <link rel="icon" type="image/x-icon" href="/wp-content/resources/logo.ico">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-resp"><a href="https://martinraczszerelo.github.io/"><img height="40" src="/wp-content/resources/martinracz.png" /></a></div>
+    <div class="top-bar-opt" style="border-left: solid 2px #aaa"><a class="top-bar-link" href="/1.html">RÓLAM</a></div>
+    <div class="top-bar-opt"><a class="top-bar-link" href="/2.html">PROJEKTEK</a></div>
+    <div class="top-bar-opt"><a class="top-bar-link" href="/3.html">EGYÉB</a></div>
+    <div class="top-bar-opt"><a class="top-bar-link" href="/keptarak/">KÉPTÁRAK</a></div>
+    <div style="float: left; padding-left: 10px; padding-top: 3px"><a href="/en/image-compression/"><img height="27" src="/wp-content/uploads/flags/eng.png" /></a></div>
+  </div>
+
+  <div style="height: 300px">
+    <h1 class="heading-main">Kép tömörítés</h1>
+  </div>
+
+  <div class="foreground">
+    <p>A képek tömörítése az egy olyan dolog, amivel nincs mindenki tisztában. Vannak emberek, akik hallottak a JPEG tömörítésről, de annál is több van. Ez az oldal bemutatja a veszteséges kép tömörítéseket.</p>
+    <p>A képek átalakított felbontása <b>1003x670 pixel</b>, bitmélységük <b>8 bit csatornánként</b> (24 bit egy pixelre). A képek a <a class="link" href="https://www.signatureedits.com/">"Signature Edits"</a> oldalról származnak.</p>
+    <h2>A képnézegetők használata</h2>
+    <p>A csúszka használatával lehet állítani a minőséget (húzással vagy rámutatva görgetéssel). A minőség mellet megjelenik az eredeti fájl mérete is. A képek egyszeri kattintásával (vagy egyszeri koppintással) fel lehet nagyítani a hibák megvizsgálásához.</p>
+    <h2>JPEG</h2>
+    <p>A JPEG (Joint Photographic Experts group), mint kép tömörítési formátum az egyik leggyakrabban használt. A formátumot a JPEG, mint csoport, az IBM, a Canon, a Mitsubishi Electric és az AT&amp;T fejlesztette ki. Minden platform magas szinten támogatja és elfogadható minőséggel tömörít. A telefonok többsége JPEG-be menti az elkészített képeket. A JPEG normát 1992-ben fogadták el.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="jpeg.html"></iframe>
+    </div>
+
+    <h2>WebP</h2>
+    <p>A WebP-t a Google fejlesztette ki 2010-ben azzal a céllal, hogy csökkentse a hálózati forgalmat ~39%-kal. Jelenleg a YouTube-on van jelentősége, mivel ebben a formátumban vannak tárolva a bélyegképek a JPEG mellet. A Webp RIFF fejlécet használ.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="webp.html"></iframe>
+    </div>
+
+    <h2>HEIF</h2>
+    <p>A HEIF (High Efficiency Image Format) képformátumot az MPEG hozta létre. Először 2013-ban definiálták, majd 2015 közepén véglegesítették. Az Apple volt az első lényeges bevezetője a formátumnak még 2017-ben, mivel az IOS 11 operációs rendszer kiadásakor ez lett az alapértelmezett képformátum. A HEIF az ISOBMFF konténert használja.</p>
+    <p>Megjegyzés: nem volt eszközöm, hogy HEIF formátumba exportáljam, így x265-tel kódoltam MP4 konténerbe, majd vissza PNG-be. Ez növeli a kompatibilitást.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="heic.html"></iframe>
+    </div>
+    
+    <h2>AVIF</h2>
+    <p>Az AVIF (AV1 Image Format) az AV1 videóra épül, pontosabban az AV1 kódolók kulcsképkocka részére. Az eredeti videókódolót (libaom-av1) az AOM (Alliance for Open Media) fejlesztette. Az AVIF az ISOBMFF (ISO Base Media File Format) konténert használja.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="avif.html"></iframe>
+    </div>
+    
+    <h2>JPEG XL</h2>
+    <p>A JPEG XL a JPEG, mint csoport, a Google és a Cloudinary által fejlesztett képtömörítési formátum, ami 2021-ben jelent meg. A JPEG XL az eredeti JPEG kiterjesztése azzal a céllal, hogy még jobb tömörítést érjen el. A formátumban egy magyar ember, Szabadka Zoltán keze is bent van a JPEG XL meghatározásában. A JPEG XL az ISOBMFF kiterjesztett változatát használja.</p>
+    <p>Megjegyzés: A JPEG XL-t a legtöbb böngésző jelenleg nem támogatja, ezért vissza átalakítottam PNG-be.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="jxl.html"></iframe>
+    </div>
+
+    <h2>Források</h2>
+    <a class="link" href="https://en.wikipedia.org/wiki/JPEG">JPEG</a><br>
+    <a class="link" href="https://en.wikipedia.org/wiki/WebP">WebP</a><br>
+    <a class="link" href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format">HEIF</a><br>
+    <a class="link" href="https://en.wikipedia.org/wiki/AVIF">AVIF</a><br>
+    <a class="link" href="https://en.wikipedia.org/wiki/JPEG_XL">JPEG XL</a>
+  </div>
+</body>
+</html>

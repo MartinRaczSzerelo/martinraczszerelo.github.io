@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <title>Image Compression - Martin Rácz</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="martin, rácz, racz, szerelő, szerelo, web, website">
+  <meta name="author" content="Martin Rácz">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="/wp-content/resources/back.png" as="image">
+  <link rel="preload" href="/wp-content/resources/scrollbar/arrow-down-active.png" as="image">
+  <link rel="preload" href="/wp-content/resources/scrollbar/arrow-up-active.png" as="image">
+  <link rel="canonical" href="https://martinraczszerelo.github.io/">
+  <link rel="stylesheet" href="/wp-content/resources/styles/main.css">
+  <link rel="icon" type="image/x-icon" href="/wp-content/resources/logo.ico">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-resp"><a href="https://martinraczszerelo.github.io/en/"><img height="40" src="/wp-content/resources/martinracz.png" /></a></div>
+    <div class="top-bar-opt" style="border-left: solid 2px #aaa"><a class="top-bar-link" href="/en/1.html">ABOUT ME</a></div>
+    <div class="top-bar-opt"><a class="top-bar-link" href="/en/2.html">PROJECTS</a></div>
+    <div class="top-bar-opt"><a class="top-bar-link" href="/en/3.html">OTHER</a></div>
+    <div class="top-bar-opt"><a class="top-bar-link" href="/en/galleries/">GALLERIES</a></div>
+    <div style="float: left; padding-left: 10px; padding-top: 3px"><a href="/kep-tomorites/"><img height="27" src="/wp-content/uploads/flags/hun.png" /></a></div>
+  </div>
+
+  <div style="height: 300px">
+    <h1 class="heading-main">Image Compression</h1>
+  </div>
+
+  <div class="foreground">
+    <p>Compressing images is something that not everyone is familiar with. There's people who heard about JPEG, but there's more than that. This page presents many lossy image compressions.</p>
+    <p>The converted images' resolution is <b>1003x670 pixel</b>, their bit depth is <b>8 bits per channel</b> (24 bits per pixel). The images come from <a class="link" href="https://www.signatureedits.com/">"Signature Edits"</a>.</p>
+    <h2>Using the image viewers</h2>
+    <p>By using the slider, you can set the quality (by dragging it or scrolling it by pointing at it). Apart from the quality, it shows the original file's size as well. By clicking on the images (or by tapping once), you can zoom the image to examine the losses.</p>
+    <h2>JPEG</h2>
+    <p>JPEG (Joint Photographic Experts group) as compression format is one of the most frequently used ones. The format was created by JPEG as the group, IBM, Canon, Mitsubishi Electric and AT&amp;T. Every platform supports it at high level and compresses image at acceptable quality. Most phones capture images in JPEG. The JPEG was finalized in 1992.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="/kep-tomorites/jpeg.html"></iframe>
+    </div>
+
+    <h2>WebP</h2>
+    <p>WebP was developed by Google in 2010 for the reason to lower the network traffic by ~39%. Currently it's used mostly on YouTube, since it stores thumbnail images in parallel with JPEG. Webp ues the RIFF header.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="/kep-tomorites/webp.html"></iframe>
+    </div>
+
+    <h2>HEIF</h2>
+    <p>The HEIF (High Efficiency Image Format) format was created by MPEG. It was defined in 2013 and later on it was finalized in 2015. Apple was the first major adopter of the format in 2017, since when the IOS 11 was released, this became the default format. The HEIF uses the ISOBMFF (ISO Base Media File Format) container.</p>
+    <p>Note: I didn't had tools to convert straight to HEIF, so I used x265 and put into MP4 container, then back to PNG. This increases the compatibility.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="/kep-tomorites/heic.html"></iframe>
+    </div>
+    
+    <h2>AVIF</h2>
+    <p>AVIF (AV1 Image Format) builds uppon AV1 video, more exactly from AV1 encoders' interframe part. The reference encoder (libaom-av1) was developed by AOM (Alliance for Open Media). The AVIF uses the ISOBMFF container.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="/kep-tomorites/avif.html"></iframe>
+    </div>
+    
+    <h2>JPEG XL</h2>
+    <p>The JPEG XL is JPEG, as the group's, Google and Cloudinary's compression format that was released in 2021. JPEG XL is the original JPEG's extension for the reason to do better compression. In the format, there was a Hungarian person, Zoltán Szabadka, who was one of them defining JPEG XL's specification. JPEG XL uses the extended version of ISOBMFF.</p>
+    <p>Note: JPEG XL is currently not supported by most browsers, so it was converted back to PNG.</p>
+    <div style="width: 100%; justify-content: center; display: flex;">
+      <iframe style="width: 100%; max-width: 700px;" height="600px" src="/kep-tomorites/jxl.html"></iframe>
+    </div>
+
+    <h2>Sources</h2>
+    <a class="link" href="https://en.wikipedia.org/wiki/JPEG">JPEG</a><br>
+    <a class="link" href="https://en.wikipedia.org/wiki/WebP">WebP</a><br>
+    <a class="link" href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format">HEIF</a><br>
+    <a class="link" href="https://en.wikipedia.org/wiki/AVIF">AVIF</a><br>
+    <a class="link" href="https://en.wikipedia.org/wiki/JPEG_XL">JPEG XL</a>
+  </div>
+</body>
+</html>

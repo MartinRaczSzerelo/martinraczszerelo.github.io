@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/wp-content/resources/styles/main.css">
+  </head>
+  <body style="background: #fff; font-family: bahnschrift; text-align: center;">
+    <style>
+    #image-view {
+      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      cursor: zoom-in;
+      width: 100%; max-width: 800px;
+    }
+
+    #image-view.zoomed {
+      transform: scale(5);
+      cursor: zoom-out;
+      transition: transform 0.4s ease-out;
+    }
+
+    #image-cont {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    </style>
+
+    <label for="slider"><h2>quality level: <span id="slider-value">0</span><br><span id="size">505</span> KB</h2></label>
+    <input style="width: 90vw; max-width: 300px;" type="range" id="slider" min="0" max="100" value="100" step="5">
+    <br>
+    <div id="image-cont">
+      <img id="image-view" src="/wp-content/uploads/files/image-compression/webp/100.webp">
+    </div>
+
+    <script>
+      const imageCache = [];
+      for (let i = 0; i <= 100; i+= 5) {
+        const img = new Image();
+        img.src = `/wp-content/uploads/files/image-compression/webp/${i}.webp`;
+        imageCache.push(img);
+      }
+
+      const displaySize = document.getElementById("size");
+      const slider = document.getElementById("slider");
+      const imageView = document.getElementById("image-view");
+      const valueDisplay = document.getElementById("slider-value");
+
+      const fileSizes = {
+        0: "4",
+        5: "6.72",
+        10: "8.17",
+        15: "9.6",
+        20: "11.1",
+        25: "12.9",
+        30: "14.5",
+        35: "16.3",
+        40: "17.9",
+        45: "19.8",
+        50: "21.6",
+        55: "23.4",
+        60: "25.4",
+        65: "27.7",
+        70: "31.3",
+        75: "33.7",
+        80: "43.2",
+        85: "57.9",
+        90: "86.7",
+        95: "151",
+        100: "199"
+      };
+
+      let lastValue = Number(slider.value);
+
+      function updateImage(value) {
+        imageView.src = `/wp-content/uploads/files/image-compression/webp/${value}.webp`;
+        valueDisplay.textContent = value;
+
+        if (fileSizes[value]) {
+          displaySize.textContent = fileSizes[value];
+        } else {
+          displaySize.textContent = "Unknown";
+        }
+      }
+
+      slider.addEventListener("wheel", (event) => {
+        event.preventDefault();
+
+        let current = Number(slider.value);
+        const step = 5;
+
+        if (event.deltaY < 0 && current < slider.max) {
+          current += step;
+        } else if (event.deltaY > 0 && current > slider.min) {
+          current -= step;
+        }
+
+        slider.value = current;
+        updateImage(current);
+        lastValue = current;
+      });
+
+      slider.addEventListener("input", () => {
+        const current = Number(slider.value);
+        updateImage(current);
+        lastValue = current;
+      });
+
+      imageView.addEventListener("click", () => {
+        imageView.classList.toggle("zoomed");
+      });
+    </script>
+  </body>
+</html>
