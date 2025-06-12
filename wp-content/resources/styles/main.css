@@ -1,11 +1,11 @@
 @font-face {
   font-family: bahnschrift;
-  src: url('https://martinraczszerelo.github.io/wp-content/resources/fonts/Bahnschrift_Regular.ttf');
+  src: url('/wp-content/resources/fonts/Bahnschrift_Regular.ttf');
 }
 
 @font-face {
   font-family: arial;
-  src: url('https://martinraczszerelo.github.io/wp-content/resources/fonts/arial.ttf');
+  src: url('/wp-content/resources/fonts/arial.ttf');
 }
 
 /*The scrollbar styling won't appear in Firefox.*/
@@ -50,7 +50,7 @@
 
 body {
   margin: 0;
-  background-image: url('https://martinraczszerelo.github.io/wp-content/resources/back.png');
+  background-image: url('/wp-content/resources/back.svg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -143,15 +143,6 @@ body {
   max-width: 100%
 }
 
-.thumbnail-trans-back {
-  position: absolute;
-}
-
-.thumbnail-trans-front {
-  position: relative;
-  animation: fade 4s infinite;
-}
-
 @keyframes fade {
   0% {opacity: 0%}
   40% {opacity: 0%}
@@ -161,8 +152,8 @@ body {
 }
 
 .thumbnail-trans-image {
-  width: 500px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
 }
 
 .chatbots {
@@ -190,7 +181,8 @@ body {
 }
 
 @media only screen and (min-width: 830px) {
-  .big-iframe { /*Added to control the appearance of embedded Youtube videos. Below 830 pixels of width, a thumbnail image will be used instead.*/
+  /*big-iframe Added to control the appearance of embedded Youtube videos. Below 830 pixels of width, a thumbnail image will be used instead.*/
+  .big-iframe {
     display: block
   }
 
