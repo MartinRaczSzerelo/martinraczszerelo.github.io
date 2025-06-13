@@ -84,5 +84,7 @@
 05-29 - Új lap lett hozzáadva: Kodek összehasonlítás. Bemutatta a kodekek közti különbséget.
 
 06-12:
-Lényeges változások: a képek többsége WebP-be lett átalakítva a gyorsabb betöltés és kevesebb adatforgalom érdekében. A háttér egy SVG ekvivalensre lett kicserélve.
-Kisebb javítások: A HTML szerkezet tisztább lett minden lapon.
+Lényeges változások - A képek többsége WebP-be lett átalakítva a gyorsabb betöltés és kevesebb adatforgalom érdekében. A háttér egy SVG ekvivalensre lett kicserélve.
+Kisebb javítások - A HTML szerkezet tisztább lett minden lapon.
+
+06-13 - Kisebb javítások
