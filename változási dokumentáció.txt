@@ -88,3 +88,5 @@ Lényeges változások - A képek többsége WebP-be lett átalakítva a gyorsab
 Kisebb javítások - A HTML szerkezet tisztább lett minden lapon.
 
 06-13 - Kisebb javítások
+
+06-23 - Új előnézetek, a lapok fájlnevéinek módosítása.
