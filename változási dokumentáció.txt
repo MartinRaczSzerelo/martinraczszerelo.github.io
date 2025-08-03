@@ -94,3 +94,5 @@ Kisebb javítások - A HTML szerkezet tisztább lett minden lapon.
 06-28 - A kodek összehasonlításban a zenés fájlok frissítve lettek.
 
 08-01 - A játékok linkjének hibajavítása és egyéb fixek.
+
+08-03 - Sok változtatás történt. Még több link fixek, elírások. Betűtípus lecserélve Bahnschrift-ről Outfit-re. Egyéb változtatások.

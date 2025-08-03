@@ -1,6 +1,6 @@
 @font-face {
   font-family: bahnschrift;
-  src: url('/wp-content/resources/fonts/Bahnschrift_Regular.ttf');
+  src: url('/wp-content/resources/fonts/Outfit-VariableFont_wght.ttf');
 }
 
 @font-face {
@@ -140,7 +140,8 @@ body {
 }
 
 .artwork {
-  max-width: 100%
+  width: 100%;
+  max-width: 600px;
 }
 
 @keyframes fade {
@@ -156,34 +157,11 @@ body {
   max-width: 500px;
 }
 
-.chatbots {
-  width: 150px;
-  min-height: 150px;
-  align-items: center;
-  display: flex;
-  text-align: center;
-}
-
-.cb-cont {
-  width: auto;
-  min-height: 150px;
-  display: flex
-}
-
-.cb-img {
-  border-radius: 50%;
-  display: block
-}
-
-.cb-img:hover {
-  border: solid 4px #000;
-  box-sizing: border-box
-}
-
 @media only screen and (min-width: 830px) {
   /*big-iframe Added to control the appearance of embedded Youtube videos. Below 830 pixels of width, a thumbnail image will be used instead.*/
   .big-iframe {
-    display: block
+    display: block;
+    border-radius: 10px;
   }
 
   .big-iframe-placeholder {
