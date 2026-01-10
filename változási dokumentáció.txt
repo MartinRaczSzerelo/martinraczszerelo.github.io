@@ -100,3 +100,8 @@ Kisebb javítások - A HTML szerkezet tisztább lett minden lapon.
 09-19 - Új fájlok lettek feltöltve hangkodekek teszteléséhez mindenki számára.
 
 11-14 - Némi változás a kiemelteknél és a "Rólam" lap frissült.
+
+
+2026:
+
+01-10 - A felső navigáló sáv új gombot kapott: LETÖLTHETŐEK
