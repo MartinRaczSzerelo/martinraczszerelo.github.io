@@ -12,5 +12,5 @@ The website is somewhat personal, but overall generic.
 
 Martin Rácz 2025. All rights reserved.
 
-### Build 20260218-2/190
+### Build 20260307-1/191
 
