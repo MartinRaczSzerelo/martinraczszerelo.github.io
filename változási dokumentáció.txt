@@ -105,3 +105,5 @@ Kisebb javítások - A HTML szerkezet tisztább lett minden lapon.
 2026:
 
 01-10 - A felső navigáló sáv új gombot kapott: LETÖLTHETŐEK
+
+04-21 - A média fájlok a kodek összehasonlításban frissítve lettek és a "Rólam" oldal is.

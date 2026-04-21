@@ -27,292 +27,292 @@
   </div>
 
   <div class="foreground">
-    <p>This page presents the difference between codecs. We talk about lossy compression, since the goal is to deliver the best quality over a specified bitrate. For audio, there's lossless compression (FLAC or TrueHD), but these won't matter here.</p>
+    <p>This page compares different audio and video codecs. The point will be lossy compression, as the goal is to see which codec provides the best quality at a given bitrate. Lossless compression options (such as FLAC, TrueHD or WavPack) exist but are ignored here.</p>
 
     <h2>Audio</h2>
-    <p>The audio files were encoded with their reference encoders for the best quality.<br>The used encoders:<br>- MP3: libmp3lame<br>- AAC-LC, HE-AAC, HE-AAC v2: libfdk_aac<br>- Opus: libopus<br>- Vorbis: libvorbis</p>
+    <p>The audio files have been compressed using reference encoders to achieve the best possible quality.<br>The used encoders are:<br>- MP3: libmp3lame<br>- AAC-LC, HE-AAC, HE-AAC v2: libfdk_aac<br>- Opus: libopus<br>- Vorbis: libvorbis</p>
     <h3>MP3</h3>
-    <p>The MP3 (or MPEG-1 audio layer 3) is the most frequently heard music format that is supported by a lot of devices and software. The MP3 was first released in august of 1993 and even now it will stay the most known format. Even though it's popular, it's not the best one.</p>
+    <p>The MP3 (or MPEG-1 audio layer 3) is the most common codec, supported by many devices and software. MP3 was first released in August 1993 and remains one of the most well-known lossy audio formats today. Although it is popular, it does not mean it is the best.</p>
 
       <div style="background-color: #9f9; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/jim-yosef-link-libmp3lame-128k.mp3" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/lame_128k.mp3" controls></audio></p>
       </div>
       <div style="background-color: #9f9; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/jim-yosef-link-libmp3lame-96k.mp3" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/lame_96k.mp3" controls></audio></p>
       </div>
       <div style="background-color: #9f9; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/jim-yosef-link-libmp3lame-64k.mp3" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/lame_64k.mp3" controls></audio></p>
       </div>
       <div style="background-color: #9f9; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/jim-yosef-link-libmp3lame-48k.mp3" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/lame_48k.mp3" controls></audio></p>
       </div>
       <div style="background-color: #9f9; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/jim-yosef-link-libmp3lame-36k.mp3" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/mp3/lame_36k.mp3" controls></audio></p>
       </div>
 
     <h3>AAC-LC</h3>
-    <p>The AAC-LC (Low Complexity AAC or simply AAC) is the MPEG audio's newer codec that is part of the MPEG-4 standard. Earlier it was in MPEG-2, but later moved to MPEG-4 and first released in 1999. The AAC audio can be found in video recordings of phones and on most social sites. Personally, it's better to use than MP3. Huge pro is that it can be put into an MPEG-4 container with the <code>.m4a</code> extension.</p>
+    <p>The AAC-LC (low complexity AAC) is the enhanced codec of MPEG audio, which belongs to the MPEG-4 standard. It was initially included in MPEG-2, but further developed in the MPEG-4 standard, first released in 1999. The AAC audio is found in many mobile phone recordings and on most social media platforms. Personally, it is significantly more usable than MP3. Its major advantage is that it can be stored in an MPEG-4 container with the <code>.m4a</code> extension.</p>
       <div style="background-color: #fb8; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/jim-yosef-link_fdk-aac-lc_128k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/aac-lc_128k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #fb8; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/jim-yosef-link_fdk-aac-lc_96k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/aac-lc_96k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #fb8; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/jim-yosef-link_fdk-aac-lc_64k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/aac-lc_64k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #fb8; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/jim-yosef-link_fdk-aac-lc_48k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/aac-lc_48k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #fb8; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/jim-yosef-link_fdk-aac-lc_36k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/aac-lc_36k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #fb8; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">24 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/jim-yosef-link_fdk-aac-lc_24k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">24 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/aac-lc/aac-lc_24k.m4a" controls></audio></p>
       </div>
 
     <h3>HE-AAC</h3>
-    <p>The HE-AAC (low complexity AAC audio with SBR extension) is a modified version of AAC that uses <b>Spectral Band Replication</b> to reproduce the higher frequencies. HE-AAC was first released in 2003 for the MPEG-4 standard. This audio compression is used in TikTok, Spotify (on low setting), as well as in digital radios.</p>
+    <p>The HE-AAC (low complexity AAC with SBR extension) is a modified version of AAC that includes SBR (Spectral Band Replication). The principle is the recreation of higher frequencies. HE-AAC was first introduced in 2003 as part of the MPEG-4 standard. This codec is used on platforms like TikTok, Facebook and digital radio alike.</p>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/jim-yosef-link_fdk-he-aac_128k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/he-aac_128k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/jim-yosef-link_fdk-he-aac_96k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/he-aac_96k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/jim-yosef-link_fdk-he-aac_64k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/he-aac_64k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/jim-yosef-link_fdk-he-aac_48k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/he-aac_48k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/jim-yosef-link_fdk-he-aac_36k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/he-aac_36k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">24 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/jim-yosef-link_fdk-he-aac_24k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">24 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/he-aac_24k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">16 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/jim-yosef-link_fdk-he-aac_16k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">16 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac/he-aac_16k.m4a" controls></audio></p>
       </div>
     
     <h3>HE-AAC v2</h3>
-    <p>HE-AAC v2 (low complexity AAC audio with SBR extension and parametric stereo) is HE-AAC's extended version that was first released 1 year after HE-AAC in 2004, again for the MPEG-4 standard. It also implements Parametric Stereo to compress the difference between stereo channels.</p>
+    <p>The HE-AAC v2 (low complexity AAC with SBR extension and parametric stereo) is an extended version of HE-AAC, introduced one year later, after HE-AAC that was first released in 2004 as part of the MPEG-4 standard. The codec also uses parametric stereo, which stores the difference between the two channels.</p>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/jim-yosef-link_fdk-he-aac-v2_48k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/he-aac-v2_48k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/jim-yosef-link_fdk-he-aac-v2_36k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/he-aac-v2_36k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">24 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/jim-yosef-link_fdk-he-aac-v2_24k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">24 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/he-aac-v2_24k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">16 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/jim-yosef-link_fdk-he-aac-v2_16k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">16 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/he-aac-v2_16k.m4a" controls></audio></p>
       </div>
       <div style="background-color: #ddd; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">12 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/jim-yosef-link_fdk-he-aac-v2_12k.m4a" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">12 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/he-aac-v2/he-aac-v2_12k.m4a" controls></audio></p>
       </div>
 
       <h3>Opus</h3>
-      <p>The Opus is developed by the Xiph.org foundation and first released on August 26th, 2012. Opus is used by YouTube and it's the WebM container's default audio codec. Opus combines two codecs: SILK and CELT's functions. In most cases, it uses CELT mode, although it's a mix.</p>
+      <p>The Opus codec is developed by the Xiph.org foundation and was first released on August 26, 2012 and standardized by the IETF. Opus is used heavily by YouTube and is the default audio codec for the WebM video container. Opus combines two codecs: SILK and CELT. In most cases, it operates in CELT mode, but it works as mixed.</p>
       <div style="background-color: #9cf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/jim-yosef-link-libopus-128k.opus" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/opus_128k.opus" controls></audio></p>
       </div>
       <div style="background-color: #9cf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/jim-yosef-link-libopus-96k.opus" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/opus_96k.opus" controls></audio></p>
       </div>
       <div style="background-color: #9cf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/jim-yosef-link-libopus-64k.opus" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/opus_64k.opus" controls></audio></p>
       </div>
       <div style="background-color: #9cf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/jim-yosef-link-libopus-48k.opus" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/opus_48k.opus" controls></audio></p>
       </div>
       <div style="background-color: #9cf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/jim-yosef-link-libopus-36k.opus" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">36 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/opus_36k.opus" controls></audio></p>
       </div>
       <div style="background-color: #9cf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">24 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/jim-yosef-link-libopus-24k.opus" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">24 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/opus_24k.opus" controls></audio></p>
       </div>
       <div style="background-color: #9cf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">16 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/jim-yosef-link-libopus-16k.opus" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">16 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/opus_16k.opus" controls></audio></p>
       </div>
       <div style="background-color: #9cf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">12 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/jim-yosef-link-libopus-12k.opus" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">12 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/opus_12k.opus" controls></audio></p>
       </div>
       <div style="background-color: #9cf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">8 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/jim-yosef-link-libopus-8k.opus" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">8 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libopus/opus_8k.opus" controls></audio></p>
       </div>
 
       <h3>Vorbis</h3>
-      <p>Vorbis is also developed by Xiph.org and libvorbis was first released it on July 19th, 2002. Vorbis is the OGG container's default audio codec.</p>
+      <p>The Vorbis codec was also developed by the Xiph.org foundation and libvorbis was first released on July 19, 2002. Vorbis is the audio codec for the OGG container and can only be used with the <code>.ogg</code> extension.</p>
       <div style="background-color: #baf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libvorbis/jim-yosef-link-libvorbis-128k.ogg" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">128 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libvorbis/vorbis_128k.ogg" controls></audio></p>
       </div>
       <div style="background-color: #baf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libvorbis/jim-yosef-link-libvorbis-96k.ogg" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">96 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libvorbis/vorbis_96k.ogg" controls></audio></p>
       </div>
       <div style="background-color: #baf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libvorbis/jim-yosef-link-libvorbis-64k.ogg" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">64 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libvorbis/vorbis_64k.ogg" controls></audio></p>
       </div>
       <div style="background-color: #baf; border-radius: 5px; width: 100%; max-width: 310px;">
-        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libvorbis/jim-yosef-link-libvorbis-48k.ogg" controls></audio></p>
+        <p style="font-size: 150%; text-align: center;">48 kbps<br><audio src="/wp-content/uploads/files/codec-comparison/audio/libvorbis/vorbis_48k.ogg" controls></audio></p>
       </div>
     
     
     <h2>Video</h2>
-    <p>Compressing video is more complex and that's why most encoders have a lot of settings. Not only the bitrate defines the quality, but the encoder's preset.</p>
-    <p>The video files were encoded using these libraries:<br>- H.264: libx264<br>- HEVC/H.265: libx265<br>- VP9: vp9_qsv (Quick Sync Video hardware encoder)<br>- AV1: libaom-av1 and libsvtav1</p>
-    <p>Notes:<br><b>- The transcoded videos are in Full HD resolution (1920x1080) and run at 24 FPS.</b><br>- The slow presets just mean that the CPU spends more time with encoding. On faster presets, it spends less time.<br>- In VP9 and AV1's case, it was hard to do constant bitrate, the numbers show the estimated bitrate. The two codecs were made for constant quality (a.k.a. CRF).</p>
+    <p>Coding videos is more complex, so they have a lot of settings. Not only the bitrate will determine the quality, but also the encoder's preset.</p>
+    <p>The video files were encoded with the next encoders:<br>- H.264: x264<br>- HEVC/H.265: x265<br>- VP9: vp9_qsv (Quick Sync Video hardware encoder)<br>- AV1: libaom-av1 and SVT-AV1</p>
+    <p>Note:<br><b>- The encoded videos have HD ready resolution (1280x720) and run at 25 FPS.</b><br>- Slower presets mean that the processor spends more time encoding, while fast presets use less time.<br>- For VP9 and AV1, the bitrate is not constant, so the numbers only show the target bitrate. These codecs were designed for constant quality encoding, so they use the CRF setting.</p>
     <h3>H.264</h3>
-    <p>The H.264 (AVC or MPEG-4 part 10) is the most frequently used video codec that was first released in 2003. It's basically used on most platforms, since the encoding speed and quality is somewhat acceptable, perfect for streaming. H.264 is part of the MPEG-4 standard and it's the default video codec for MP4, MOV, MKV containers.</p>
-    
+    <p>The H.264 (AVC or MPEG-4 part 10) is the most widely used video codec, first released in 2003. It is used on every platform, as its encoding speed and quality is reasonably acceptable, making it suitable for streaming purposes. The H.264 is part of the MPEG-4 standard and is the default video codec for the MP4, MOV, and MKV (Matroska) container.</p>
+
     <div style="padding: 10px; text-align: center; background-color: #1e8fff; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">Slow preset (veryslow)</h3>
       <div style="background-color: rgb(177, 224, 255); border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">2 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/libx264-veryslow-2Mbps.mp4"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/x264_veryslow_1M.mp4"></video></p>
       </div>
       <div style="background-color: rgb(177, 224, 255); border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/libx264-veryslow-1Mbps.mp4"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/x264_veryslow_500k.mp4"></video></p>
       </div>
       <div style="background-color: rgb(177, 224, 255); border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/libx264-veryslow-500kbps.mp4"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/x264_veryslow_200k.mp4"></video></p>
       </div>
       <div style="background-color: rgb(177, 224, 255); border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/libx264-veryslow-200kbps.mp4"></video></p>
+        <p style="font-size: 200%;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/x264_veryslow_100k.mp4"></video></p>
       </div>
     </div>
-    <div style="padding: 10px; text-align: center; background-color: #0034c2; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">Fast preset (ultrafast)</h3>
+    <div style="padding: 10px; text-align: center; background-color: #0034c2; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">fast preset (ultrafast)</h3>
       <div style="background-color: rgb(177, 224, 255); border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">2 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/libx264-ultrafast-2Mbps.mp4"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/x264_ultrafast_1M.mp4"></video></p>
       </div>
       <div style="background-color: rgb(177, 224, 255); border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/libx264-ultrafast-1Mbps.mp4"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/x264_ultrafast_500k.mp4"></video></p>
       </div>
       <div style="background-color: rgb(177, 224, 255); border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/libx264-ultrafast-500kbps.mp4"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/x264_ultrafast_200k.mp4"></video></p>
       </div>
       <div style="background-color: rgb(177, 224, 255); border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/libx264-ultrafast-200kbps.mp4"></video></p>
+        <p style="font-size: 200%;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx264/x264_ultrafast_100k.mp4"></video></p>
       </div>
     </div>
 
     <h3>H.265</h3>
-    <p>The H.265 (a.k.a. HEVC, or MPEG-H part 2) is the successor of H.264 that was first released by MPEG on June 7th, 2013 for the MPEG-H standard. For example, the codec is used by TikTok and Facebook. Its downside is that it's heavily patented.</p>
-    
-    <div style="padding: 10px; text-align: center; background-color: #ccc; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">Slow preset (slower)</h3>
+    <p>The H.265 (known as HEVC or MPEG-H part 2) is the successor to H.264, first released by MPEG on June 7, 2013, as part of the MPEG-H standard. The codec is used by platforms such as TikTok and Facebook. Its main drawback is that it's heavily protected by patents.</p>
+
+    <div style="padding: 10px; text-align: center; background-color: #ccc; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">Slow preset (slow)</h3>
       <div style="background-color: #8b8b8b; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">2 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/libx265-slower-2Mbps.mp4"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/x265_slow_1M.mp4"></video></p>
       </div>
       <div style="background-color: #8b8b8b; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/libx265-slower-1Mbps.mp4"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/x265_slow_500k.mp4"></video></p>
       </div>
       <div style="background-color: #8b8b8b; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/libx265-slower-500kbps.mp4"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/x265_slow_200k.mp4"></video></p>
+      </div>
+      <div style="background-color: #8b8b8b; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
+        <p style="font-size: 200%;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/x265_slow_100k.mp4"></video></p>
       </div>
     </div>
-    <div style="padding: 10px; text-align: center; background-color: #646464; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">Fast preset (faster)</h3>
+    <div style="padding: 10px; text-align: center; background-color: #646464; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">Fast preset (veryfast)</h3>
       <div style="background-color: #8b8b8b; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">2 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/libx265-faster-2Mbps.mp4"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/x265_veryfast_1M.mp4"></video></p>
       </div>
       <div style="background-color: #8b8b8b; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/libx265-faster-1Mbps.mp4"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/x265_veryfast_500k.mp4"></video></p>
       </div>
       <div style="background-color: #8b8b8b; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/libx265-faster-500kbps.mp4"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/x265_veryfast_200k.mp4"></video></p>
+      </div>
+      <div style="background-color: #8b8b8b; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
+        <p style="font-size: 200%;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libx265/x265_veryfast_100k.mp4"></video></p>
       </div>
     </div>
 
     <h3>VP9</h3>
-    <p>The VP9 was developed by Google that was released 10 days after HEVC, on June 17th, 2013. The codec is mainly used on YouTube and it's one of the WebM container's codec. The codec and its reference encoder, libvpx-vp9 is free to use with no charge.</p>
-    
+    <p>The VP9 is a video codec developed by Google, released 10 days after HEVC on June 17, 2013. It is primarily used by YouTube and is one of the codecs for the WebM video container. The codec and its reference encoder (libvpx-vp9) can be used freely without any fee.</p>
+
     <div style="padding: 10px; text-align: center; background-color: #ffdf53; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">Slow preset (veryslow)</h3>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">2 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9_qsv-veryslow-2Mbps.webm"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryslow_1M.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9_qsv-veryslow-1Mbps.webm"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryslow_500k.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9_qsv-veryslow-500kbps.webm"></video></p>
-      </div>
-      <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9_qsv-veryslow-200kbps.webm"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryslow_200k.webm"></video></p>
       </div>
     </div>
     <div style="padding: 10px; text-align: center; background-color: #a8871a; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">Fast preset (veryfast)</h3>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">2 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9_qsv-veryfast-2Mbps.webm"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryfast_1M.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9_qsv-veryfast-1Mbps.webm"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryfast_500k.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9_qsv-veryfast-500kbps.webm"></video></p>
-      </div>
-      <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9_qsv-veryfast-200kbps.webm"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryfast_200k.webm"></video></p>
       </div>
     </div>
 
     <h3>AV1</h3>
-    <p>The AV1 is developed by AOM (Alliance for Open Media) that was first released on March 28th, 2018. The codec is also used on YouTube and another codec for the WebM container.<br>For the AV1, there's three software encoder, I used two for this comparison: libaom-av1 and libsvtav1. libaom-av1 is the best quality software encoder, but its drawback is the poor performance, since the encoder focuses on quality. That's why Intel and Netflix cooperated and created the libsvtav1 encoder library. libsvtav1 focuses on performance, sacrificing quality for real-time application.</p>
-    
-    <div style="padding: 10px; text-align: center; background-color: #ff5555; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">libaom-av1's fastest preset (-cpu-used 8)</h3>
+    <p>The AV1 is a video codec developed by the Alliance for Open Media (AOM for short), which was first released on March 28, 2018. The codec is heavily used by YouTube and Netflix and is one of the codecs for the WebM video container.<br>The AV1 has three software encoders, of which I used two for the examples: libaom-av1 and libsvtav1. The libaom-av1 is the best quality software encoder, but its drawback is the poor performance, as the encoder prioritizes quality. Therefore, Intel and Netflix together created the libsvtav1 encoder library. The SVT-AV1 sacrifices quality for performance, making it suitable for real-time usage.</p>
+
+    <div style="padding: 10px; text-align: center; background-color: #ff5555; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">libaom-av1 faster preset (-cpu-used 8)</h3>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">2 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libaom-av1/libaom-av1-cpuused8-2Mbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libaom-av1/aom-av1_cpu-used8_1M.webm"></video></p>
       </div>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libaom-av1/libaom-av1-cpuused8-1Mbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libaom-av1/aom-av1_cpu-used8_500k.webm"></video></p>
       </div>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libaom-av1/libaom-av1-cpuused8-500kbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libaom-av1/aom-av1_cpu-used8_200k.webm"></video></p>
       </div>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libaom-av1/libaom-av1-cpuused8-200kbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libaom-av1/aom-av1_cpu-used8_100k.webm"></video></p>
       </div>
     </div>
     <br>
-    <div style="padding: 10px; text-align: center; background-color: #ff5555; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">libsvtav1's slower preset (-preset 5)</h3>
+    <div style="padding: 10px; text-align: center; background-color: #ff5555; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">SVT-AV1's slower preset (-preset 4)</h3>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">2 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/libsvtav1-preset5-2Mbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/svtav1_preset4_1M.webm"></video></p>
       </div>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/libsvtav1-preset5-1Mbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/svtav1_preset4_500k.webm"></video></p>
       </div>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/libsvtav1-preset5-500kbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/svtav1_preset4_200k.webm"></video></p>
       </div>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/libsvtav1-preset5-200kbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/svtav1_preset4_100k.webm"></video></p>
       </div>
     </div>
-    <div style="padding: 10px; text-align: center; background-color: #7a0000; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">libsvtav1's faster preset (-preset 10)</h3>
+    <div style="padding: 10px; text-align: center; background-color: #7a0000; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">SVT-AV1's faster preset (-preset 10)</h3>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">2 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/libsvtav1-preset10-2Mbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/svtav1_preset10_1M.webm"></video></p>
       </div>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/libsvtav1-preset10-1Mbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/svtav1_preset10_500k.webm"></video></p>
       </div>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/libsvtav1-preset10-500kbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/svtav1_preset10_200k.webm"></video></p>
       </div>
       <div style="background-color: #b60000; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%; color: #fff;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/libsvtav1-preset10-200kbps.webm"></video></p>
+        <p style="font-size: 200%; color: #fff;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/av1/libsvtav1/svtav1_preset10_100k.webm"></video></p>
       </div>
     </div>
     
     <h2>Sources:</h2>
-    <a class="link" href="https://en.wikipedia.org/wiki/MP3">MP3</a><br>
+    <a class="link" href="https://hu.wikipedia.org/wiki/MP3">MP3</a><br>
     <a class="link" href="https://en.wikipedia.org/wiki/Advanced_Audio_Coding">AAC-LC</a><br>
-    <a class="link" href="https://en.wikipedia.org/wiki/High-Efficiency_Advanced_Audio_Coding">HE-AAC and HE-AAC v2</a><br>
+    <a class="link" href="https://en.wikipedia.org/wiki/High-Efficiency_Advanced_Audio_Coding">HE-AAC és HE-AAC v2</a><br>
     <a class="link" href="https://en.wikipedia.org/wiki/Opus_(audio_format)">Opus</a><br>
     <a class="link" href="https://en.wikipedia.org/wiki/Vorbis">Vorbis</a><br>
     <a class="link" href="https://en.wikipedia.org/wiki/Advanced_Video_Coding">H.264</a><br>
-    <a class="link" href="https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding">HEVC</a><br>
+    <a class="link" href="https://hu.wikipedia.org/wiki/H.265">HEVC</a><br>
     <a class="link" href="https://en.wikipedia.org/wiki/VP9">VP9</a><br>
     <a class="link" href="https://en.wikipedia.org/wiki/AV1">AV1</a><br>
-    <a class="link" href="https://www.pexels.com/video/an-artist-s-animation-of-artificial-intelligence-ai-this-video-represents-how-ai-powered-tools-can-support-us-and-save-time-it-was-created-by-martina-stiftinger-as-part-of-the-visualis-18069232/">Encoded video's source (Pexels)</a><br>
-    <p>The encoded videos are for personal use and only for examples. Highly recommended to use the original from the origin site that is free to use.</p>
-    <p>The encoded audio is the same case.<br><br>Song: Jim Yosef - Link [NCS Release]<br>Music provided by NoCopyrightSounds<br>Free Download/Stream: http://ncs.io/Link<br>Watch: http://youtu.be/9iHM6X6uUH8</p>
+    <p>The video was captured by me.<br>
+    The re-encoded videos are for personal use only and should be used as examples. The original video should be used from its original source, which is in the public domain.</p>
+    <p>The re-encoded audio must be attributed.<br>Song: JJD - Adventure [NCS Release]<br>Music provided by NoCopyrightSounds<br>Free Download/Stream: http://ncs.io/adventure<br>Watch: http://youtu.be/f2xGxd9xPYA</p>
   </div>
 </body>
 </html>
