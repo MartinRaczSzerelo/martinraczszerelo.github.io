@@ -166,8 +166,8 @@
     
     <h2>Videó</h2>
     <p>A videó kódolása bonyolultabb, ezért rengeteg beállítással rendelkeznek. Itt nemcsak a bitráta határozza meg a minőséget, hanem a kódoló előbeállítása is.</p>
-    <p>A videófájlok a következő kódolókkal lettek tömörítve:<br>- H.264: x264<br>- HEVC/H.265: x265<br>- VP9: vp9_qsv (Quick Sync Video hardver kódoló)<br>- AV1: libaom-av1 és SVT-AV1</p>
-    <p>Megjegyzések:<br><b>- Az átkódolt videók HD ready felbontásúak (1280x720) és 25 FPS-en futnak.</b><br>- A lassú előbeállítás annyit jelent, hogy a processzor több időt tölt kódolással, míg gyorsnál rövidebb ideig.<br>- A VP9 és az AV1 esetében a bitráta nem állandó, ezért a számok csak a cél bitrátát mutatják. A kettő kodek állandó minőségű kódoláshoz lettek tervezve, tehát CRF beállításhoz.</p>
+    <p>A videófájlok a következő kódolókkal lettek tömörítve:<br>- H.264: x264<br>- HEVC/H.265: x265<br>- VP9: libvpx-vp9 (referencia kódoló)<br>- AV1: libaom-av1 és SVT-AV1</p>
+    <p>Megjegyzések:<br><b>- Az átkódolt videók HD ready felbontásúak (1280x720) és 25 FPS-en futnak.</b><br>- A lassú előbeállítás annyit jelent, hogy a processzor több időt tölt kódolással, míg gyorsnál rövidebb ideig.<br>- A VP9 és az AV1 esetében a bitráta nem állandó bitrátához vannak igazítva, ezért a számok csak a cél bitrátát mutatják. A kettő kodek állandó minőségű kódoláshoz lettek tervezve, tehát CRF beállításhoz.</p>
     <h3>H.264</h3>
     <p>A H.264 (AVC vagy MPEG-4, 10. rész) a leggyakrabban használt videó kodek, amit először 2003-ban adtak ki. Gyakorlatilag minden platformon van használva, mivel a kódolási sebessége és a minősége valamennyire elfogadható, így felhasználható közvetítési célra is. A H.264 az MPEG-4 szabványba sorolható és az MP4, MOV, MKV (Matroska) konténer alapértelmezett videó kodekje.</p>
     
@@ -234,27 +234,35 @@
 
     <h3>VP9</h3>
     <p>A VP9-et a Google fejlesztette, amit 10 nappal a HEVC után, 2013. Június 17.-én adott ki. A kodeket a YouTube használja elsősorban és a WebM videókonténer egyik kodekje. A kodek és a referencia kódolóját (libvpx-vp9) szabadon fel lehet használni nulla díjjal.</p>
+
+    <i>Megjegyzés: A kötött bitráta miatt a kulcsképkockák jobban észrevehetőek a minőségromlás által.</i><br>
     
-    <div style="padding: 10px; text-align: center; background-color: #ffdf53; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">Lassú előbeállítás (veryslow)</h3>
+    <div style="padding: 10px; text-align: center; background-color: #ffdf53; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">Lassú előbeállítás (-deadline good -speed 3)</h3>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryslow_1M.webm"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_good_speed3_1M.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryslow_500k.webm"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_good_speed3_500k.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryslow_200k.webm"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_good_speed3_200k.webm"></video></p>
+      </div>
+      <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
+        <p style="font-size: 200%;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_good_speed3_100k.webm"></video></p>
       </div>
     </div>
-    <div style="padding: 10px; text-align: center; background-color: #a8871a; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">gyors előbeállítás (veryfast)</h3>
+    <div style="padding: 10px; text-align: center; background-color: #a8871a; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">gyors előbeállítás (-deadline realtime -speed 8)</h3>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryfast_1M.webm"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_realtime_speed8_1M.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryfast_500k.webm"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_realtime_speed8_500k.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryfast_200k.webm"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_realtime_speed8_200k.webm"></video></p>
+      </div>
+      <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
+        <p style="font-size: 200%;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_realtime_speed8_100k.webm"></video></p>
       </div>
     </div>
 
@@ -316,7 +324,7 @@
     <a class="link" href="https://en.wikipedia.org/wiki/VP9">VP9</a><br>
     <a class="link" href="https://en.wikipedia.org/wiki/AV1">AV1</a><br>
     <p>A videó felvételt én készítettem.<br>
-    Az átkódolt videók személyes célra használhatóak fel és akkor is csak példának. Az eredeti videót az eredeti forrásból érdemes használni, ami viszont szerzői jog nélküli.</p>
+    Az átkódolt videók személyes célra használhatóak fel és akkor is csak példának. Az eredeti videó a saját veszteségmentes videóim kollekciójában található meg, ami közkincs. A kollekcióhoz <a class="link" href="https://archive.org/details/free-uncompressed-videos_the-collection">ezt az archive.org oldalt</a> tekintsd meg.</p>
     <p>Az átkódolt hanganyag is ugyanígy érvényes.<br>Song: JJD - Adventure [NCS Release]<br>Music provided by NoCopyrightSounds<br>Free Download/Stream: http://ncs.io/adventure<br>Watch: http://youtu.be/f2xGxd9xPYA</p>
   </div>
 </body>

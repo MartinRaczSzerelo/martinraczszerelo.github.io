@@ -166,8 +166,8 @@
     
     <h2>Video</h2>
     <p>Coding videos is more complex, so they have a lot of settings. Not only the bitrate will determine the quality, but also the encoder's preset.</p>
-    <p>The video files were encoded with the next encoders:<br>- H.264: x264<br>- HEVC/H.265: x265<br>- VP9: vp9_qsv (Quick Sync Video hardware encoder)<br>- AV1: libaom-av1 and SVT-AV1</p>
-    <p>Note:<br><b>- The encoded videos have HD ready resolution (1280x720) and run at 25 FPS.</b><br>- Slower presets mean that the processor spends more time encoding, while fast presets use less time.<br>- For VP9 and AV1, the bitrate is not constant, so the numbers only show the target bitrate. These codecs were designed for constant quality encoding, so they use the CRF setting.</p>
+    <p>The video files were encoded with the next encoders:<br>- H.264: x264<br>- HEVC/H.265: x265<br>- VP9: libvpx-vp9 (reference encoder)<br>- AV1: libaom-av1 and SVT-AV1</p>
+    <p>Note:<br><b>- The encoded videos have HD ready resolution (1280x720) and run at 25 FPS.</b><br>- Slower presets mean that the processor spends more time encoding, while fast presets use less time.<br>- VP9 and AV1 aren't made for constant bitrate, so the numbers will only show target bitrates. These codecs were designed for constant quality encoding, so they use the CRF setting.</p>
     <h3>H.264</h3>
     <p>The H.264 (AVC or MPEG-4 part 10) is the most widely used video codec, first released in 2003. It is used on every platform, as its encoding speed and quality is reasonably acceptable, making it suitable for streaming purposes. The H.264 is part of the MPEG-4 standard and is the default video codec for the MP4, MOV, and MKV (Matroska) container.</p>
 
@@ -235,26 +235,34 @@
     <h3>VP9</h3>
     <p>The VP9 is a video codec developed by Google, released 10 days after HEVC on June 17, 2013. It is primarily used by YouTube and is one of the codecs for the WebM video container. The codec and its reference encoder (libvpx-vp9) can be used freely without any fee.</p>
 
-    <div style="padding: 10px; text-align: center; background-color: #ffdf53; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">Slow preset (veryslow)</h3>
+    <i>Note: because of the constrained bitrate, keyframes are more noticeable by quality degradation.</i><br>
+
+    <div style="padding: 10px; text-align: center; background-color: #ffdf53; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #000;">Slow preset (-deadline good -speed 3)</h3>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryslow_1M.webm"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_good_speed3_1M.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryslow_500k.webm"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_good_speed3_500k.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryslow_200k.webm"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_good_speed3_200k.webm"></video></p>
+      </div>
+      <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
+        <p style="font-size: 200%;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_good_speed3_100k.webm"></video></p>
       </div>
     </div>
-    <div style="padding: 10px; text-align: center; background-color: #a8871a; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">Fast preset (veryfast)</h3>
+    <div style="padding: 10px; text-align: center; background-color: #a8871a; border-radius: 5px; align-items: center;"><h3 style="font-size: 200%; color: #fff;">Fast preset (-deadline realtime -speed 8)</h3>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryfast_1M.webm"></video></p>
+        <p style="font-size: 200%;">1 Mbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_realtime_speed8_1M.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryfast_500k.webm"></video></p>
+        <p style="font-size: 200%;">500 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_realtime_speed8_500k.webm"></video></p>
       </div>
       <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
-        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/vp9_qsv/vp9-qsv_veryfast_200k.webm"></video></p>
+        <p style="font-size: 200%;">200 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_realtime_speed8_200k.webm"></video></p>
+      </div>
+      <div style="background-color: #ffc400; border-radius: 5px; text-align: center; width: 100%; max-width: 840px;">
+        <p style="font-size: 200%;">100 kbps<br><video style="width: 100%; max-width: 800px; border-radius: 5px;" controls src="/wp-content/uploads/files/codec-comparison/video/libvpx-vp9/libvpx-vp9_realtime_speed8_100k.webm"></video></p>
       </div>
     </div>
 
@@ -316,7 +324,7 @@
     <a class="link" href="https://en.wikipedia.org/wiki/VP9">VP9</a><br>
     <a class="link" href="https://en.wikipedia.org/wiki/AV1">AV1</a><br>
     <p>The video was captured by me.<br>
-    The re-encoded videos are for personal use only and should be used as examples. The original video should be used from its original source, which is in the public domain.</p>
+    The re-encoded videos are for personal use only and should be used as examples. The original video is from my collection of uncompressed videos, which is in the public domain. To get the lossless version, visit <a class="link" href="https://archive.org/details/free-uncompressed-videos_the-collection">this archive.org page</a> of the collection.</p>
     <p>The re-encoded audio must be attributed.<br>Song: JJD - Adventure [NCS Release]<br>Music provided by NoCopyrightSounds<br>Free Download/Stream: http://ncs.io/adventure<br>Watch: http://youtu.be/f2xGxd9xPYA</p>
   </div>
 </body>
